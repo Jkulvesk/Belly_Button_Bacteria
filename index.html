@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p><b>Use the interactive charts below to explore the dataset</b></p>
+      </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Belly Button Bacteria Project Overview</h3>
+            </div>
+            <div class="col-md-9">
+                <p>
+                    Rosa's lab has partnered with Improbable Beef to understand if bacterial protiens in the belly button can be used to enhance the taste of their 'beef' product. Data from belly botton samples are found below. Select on the ID of the participant to get specific particpant details.
+
+
+                </p>    
+            </div> 
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-4">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <p>
+                After selecting the subject ID number, you can view the top 10 bacterium found as well as weekly washing frequency in the charts above. <br><br> The bubble chart below shows the bacteria types found per sample. The size of the bubble indicates how many different bacteria is found per sample. Hover over the bubble to see the top bacteria types for the sample collected.
+            </p>    
+        </div> 
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+  <script src="plots.js"></script>
+
+</body>
+
+</html>
